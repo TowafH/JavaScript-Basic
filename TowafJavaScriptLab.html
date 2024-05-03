@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<style>
+
+ button {
+  font-family: Georgia;
+  background-color: navy;
+  color: white;
+}
+
+button:hover {
+  background-color: lightblue;
+  border: 1px solid navy;
+  width: 100px;
+}
+
+ #container{
+ margin: 0 auto;
+ align-items: center;
+ border: 1px solid black;
+ text-align: center;
+ margin: 0 auto;
+ height: 150px;
+ width: 600px;
+}
+
+ #box{
+ height: 100px;
+ width: 100px;
+ background-color: red;
+ margin: 0 auto;
+}
+
+</style>
+    <title> JavaScript Basic </title>
+  </head>
+<body>
+ 
+ <div id="container">
+<h1>JavaScript Output Below</h1>
+
+  <button type="button" onclick="add()">
+    Add 6 + 5
+  </button>
+
+  <button type="button" onclick="subtract()">
+    Subtract 10 - 3
+</button>
+
+  <button type="button" onclick="multiply()">
+    Multiply 7 * 4
+</button>
+
+  <button type="button" onclick="divide()">
+    Divide 100 / 5
+</button>
+
+  <button type="button" onclick="greeting()">
+    Greeting!
+</button>
+
+<p id="demo">This will change with JavaScript</p>
+
+<br>
+
+ <div id="box" onmousemove="moveFunk(event)" onmouseout="clearCoor()">
+ </div>
+
+ </div>
+<hr>
+
+
+
+
+  <script>
+
+   function add(){
+     document.getElementById("demo").innerHTML = 6 + 5
+  }
+
+  function subtract(){
+     document.getElementById("demo").innerHTML = 10 - 3
+  }
+
+  function multiply(){
+     document.getElementById("demo").innerHTML = 7 * 4
+  }
+
+  function divide(){
+     document.getElementById("demo").innerHTML = 100 / 5
+  }
+
+  function greeting(){
+     document.getElementById("demo").innerHTML = "Hello World"
+  }
+  
+  function moveFunk(e){
+    let x = e.clientX
+    let y = e.clientY
+    let coor = "Coordinates: (" +x+ "," +y+ ")"
+    document.getElementById("demo").innerHTML = coor
+
+  }
+
+  function clearCoor(){
+   document.getElementById("demo").innerHTML = " "
+  }
+
+  </script>
+
+</body>
+</html> 
